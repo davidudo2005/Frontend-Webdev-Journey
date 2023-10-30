@@ -1,1 +1,16 @@
 /* Write your code here: */
+h1,h2{
+    color: blue;      /*GROUP SELECTION*/
+}
+ .box>.done{
+    color: firebrick;  /*CHILD SELECTOR*/
+}
+.box li{
+    color: blue;        /*DESENDANT SELECTOR*/
+}
+li.done{
+    color: seagreen;     /*CHAIN SELECTOR*/
+}
+ul p.done{
+    font-size: 0.5rem;
+}
