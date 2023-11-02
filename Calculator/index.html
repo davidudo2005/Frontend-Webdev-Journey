@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <style>
+      #box{
+        height: 400px;
+        width: 400px;
+        background-color: rgb(56, 209, 209);
+        padding: 30px;
+        border-radius: 40px;
+        position: relative;
+    
+      }
+      #screen{
+        height: 100px;
+        width: 400px;
+        background-color: rgba(248, 252, 255, 0.809);
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+     .screen-number{
+        font-family: 'Calculator', sans-serif;
+        font-size: 100px;    
+        text-align: right;   
+        margin-top: 0%;  
+        margin-right: 10px;                            
+      }
+      .key-numbers{
+       font-family:  Arial, sans-serif;
+        font-size: 70px;  
+        text-align: center;
+        margin: 0;
+      }
+
+      .signs{
+        font-family: Arial, sans-serif;
+        font-size: 80px;  
+        text-align: center;
+        margin: 0;
+      }
+
+      #side-keys{
+        height: 80px;
+        width: 90px;
+        background-color: rgb(35, 186, 186);
+        border-radius: 10px;
+        margin: 20px;
+        margin-left: 0;
+     }
+
+     #lmiddle-keys{
+        height: 80px;
+        width: 90px;
+        background-color: rgb(35, 186, 186);
+        border-radius: 10px;
+        position: absolute;
+        left: 130px;
+     }
+
+     #rmiddle-keys{
+        height: 80px;
+        width: 90px;
+        background-color: rgb(35, 186, 186);
+        border-radius: 10px;
+        position: absolute;
+        left: 230px;
+     }
+
+     #rside-keys{
+        height: 80px;
+        width: 90px;
+        background-color: rgb(35, 186, 186);
+        border-radius: 10px;
+        position: absolute;
+        left: 330px;
+     }
+    </style>
+</head>
+<link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+
+
+<body>
+    <div id="box">
+        <div id="screen">
+            <p class="screen-number">O</p>
+        </div>
+
+        <div id="rside-keys">
+            <p class="signs">+</p>
+        </div>
+
+        <div id="lmiddle-keys">
+            <p class="key-numbers">8</p>
+        </div>    
+
+        <div id="rmiddle-keys">
+            <p class="key-numbers">9</p>
+        </div>    
+    
+        <div id="side-keys">
+            <p class="key-numbers">7</p>
+        </div>
+
+        <div id="rside-keys">
+            <p class="signs">-</p>
+        </div>
+
+        <div id="lmiddle-keys">
+            <p class="key-numbers">5</p>
+        </div>    
+
+        <div id="rmiddle-keys">
+            <p class="key-numbers">6</p>
+        </div>    
+    
+        <div id="side-keys">
+            <p class="key-numbers">4</p>
+        </div>
+
+        <div id="rside-keys">
+            <p class="signs">=</p>
+        </div>
+
+        <div id="lmiddle-keys">
+            <p class="key-numbers">2</p>
+        </div>
+  
+        <div id="rmiddle-keys">
+            <p class="key-numbers">3</p>
+        </div>  
+
+        <div id="side-keys">
+            <p class="key-numbers">1</p>
+        </div>
+
+
+    </div>
+</body>
+</html>
