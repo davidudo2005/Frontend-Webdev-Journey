@@ -43,15 +43,24 @@ html{
     background-color: white; 
     border-radius: 5px;
     padding: 10px 10px;
+    overflow:scroll;
 }
 
-p{
+.taskadded{
     height: 50px;
     border: 1px solid rgba(221, 218, 218, 0.325);
     border-radius: 5px;
     box-shadow: 1px 1px 5px 2px #cfa2f74a;
-    color: rgb(156, 154, 154);
+    background-color: #b375ea;
+    padding-left: 10px;
+    color: white;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between
 }
 
+.deletetask{
+    color: #d0b0ec;
+    padding-right: 10px;
+    cursor: pointer;
+}
