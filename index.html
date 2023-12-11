@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #result-image {
+      margin-top: 20px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+  <title>Image Background Remover</title>
+</head>
+<body>
+
+  <h1>Image Background Remover</h1>
+
+  <input type="file" id="imageInput" accept="image/*">
+  <button onclick="removeBackground()">Remove Background</button>
+
+  <div id="result-image"></div>
+
+  <script>
+    function removeBackground() {
+      var imageInput = document.getElementById("imageInput");
+      var resultImage = document.getElementById("result-image");
+
+      // Check if a file is selected
+      if (imageInput.files.length > 0) {
+        var file = imageInput.files[0];
+
+        // Create a FormData object to send the file to the remove.bg API
+        var formData = new FormData();
+        formData.append("image_file", file);
+        formData.append("size", "auto");
+
+        // Replace "YOUR_API_KEY" with your actual remove.bg API key
+        var apiKey = "YOUR_API_KEY";
+
+        // Send a POST request to the remove.bg API
+        fetch("https://api.remove.bg/v1.0/removebg", {
+          method: "POST",
+          headers: {
+            "X-Api-Key": apiKey,
+          },
+          body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Display the result image
+          resultImage.innerHTML = `<img src="${data.data.result}" alt="Result Image">`;
+        })
+        .catch(error => console.error("Error:", error));
+      } else {
+        alert("Please select an image.");
+      }
+    }
+  </script>
+
+</body>
+</html>
